@@ -1,31 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div
+      id="nav"
+      class="h-16 w-full py-4 text-xl font-mono text-green-500 text-center"
+    >
+      <router-link to="/" class="text-xl font-mono text-green-500"
+        >Home</router-link
+      >
+      |
+      <router-link to="/cats" class="text-xl font-mono text-green-500"
+        >Cats</router-link
+      >
+      |
+      <router-link to="/dogs" class="text-xl font-mono text-green-500"
+        >Dogs</router-link
+      >
+      <!-- |
+      <router-link to="/pets" class="text-xl font-mono text-green-500"
+        >Pets</router-link -->
+      <!-- > -->
     </div>
     <router-view />
   </div>
 </template>
-
+<script>
+import "@/assets/css/main.css";
+export default {
+  name: "App"
+};
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #nav {
   padding: 30px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
-
     &.router-link-exact-active {
-      color: #42b983;
+      color: teal;
     }
   }
 }
